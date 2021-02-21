@@ -1,0 +1,37 @@
+d9c0ad18-2a90-3b7c-beb6-0013992cb85e:
+  LogsCount: 5
+  '1':
+    Date: 21-2-2021
+    Detection: BADPACKETS
+    Type: TypeD
+    TPS: 20.0
+    Ping: 1
+    PunishType: KICK
+  '2':
+    Date: 21-2-2021
+    Detection: BADPACKETS
+    Type: TypeD
+    TPS: 20.0
+    Ping: 0
+    PunishType: KICK
+  '3':
+    Date: 21-2-2021
+    Detection: BADPACKETS
+    Type: TypeD
+    TPS: 20.0
+    Ping: 0
+    PunishType: KICK
+  '4':
+    Date: 21-2-2021
+    Detection: BADPACKETS
+    Type: TypeD
+    TPS: 20.0
+    Ping: 0
+    PunishType: KICK
+  '5':
+    Date: 21-2-2021
+    Detection: BADPACKETS
+    Type: TypeD
+    TPS: 20.0
+    Ping: 0
+    PunishType: KICK

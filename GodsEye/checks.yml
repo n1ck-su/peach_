@@ -1,0 +1,447 @@
+#=========================
+# checks Settings
+#=========================
+# You can enable/disable checks and customize them
+
+# Time-Unit: seconds
+# Set how many time after player logs in GodsEye should
+# start checking the player (recommended to not set below 2)
+Login checks activation delay: 3
+
+#=========================
+# Alerts settings
+#=========================
+# if you set an alert to be sent at (Max Violations - 5) it will be colored red
+# if you set an alert to be sent at (Smaller then or equal to (Max Violations / 3)) it will be colored green
+# every alert that is not at the limit of the two above will be colored orange
+
+# This colors can help your staff know if a hacker is heavily suspected or not
+# If you found this settings to complicated you can leave the settings at default or
+# ask for help on our discord server
+
+# Evey player that is in this worlds will not be checked by GodsEye
+Disabled_Worlds:
+  - Lobby
+
+#=========================
+#Prevent system settings
+#=========================
+SetBack-system:
+  # Force godseye to create a new setback location after a certain distance
+  Check_distance:
+    state: Enabled
+    max: 10
+  # Reset location timer (ticks)
+  timer: 160
+
+#=========================
+# Almost every checks has Types
+# every type is basically a different way to block the cheat
+# that the check is meant to block, some types are better then
+# others, if a check causes problems you can disable the specific type
+# that caused the issue and still use the other types, that way you still
+# have a fair level of protection against that cheat
+#=========================
+
+Fly:
+  Check: Enabled
+  Max flags: 35
+  Prevent:
+    state: Enabled
+    flags: 4
+  Types:
+    TypeA: Disabled
+    TypeB: Enabled
+    TypeC: Enabled
+    TypeD: Enabled
+    TypeE: Enabled
+    TypeF: Enabled
+    TypeG: Disabled
+    TypeH: Enabled
+  Alert violations:
+    - 10
+    - 18
+    - 30
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Movement:
+  Check: Enabled
+  Max flags: 30
+  Prevent:
+    state: Enabled
+    flags: 5
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+    TypeC: Enabled
+    TypeD: Enabled
+    TypeE: Enabled
+    TypeF: Disabled
+    TypeG: Enabled
+    TypeH: Enabled
+    TypeI: Enabled
+  Alert violations:
+    - 10
+    - 18
+    - 25
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Speed:
+  Check: Enabled
+  Max flags: 40
+  Prevent:
+    state: Enabled
+    flags: 5
+  Types:
+    TypeA: Disabled
+    TypeB: Enabled
+    TypeC: Enabled
+    TypeD: Enabled
+    TypeE: Enabled
+  Alert violations:
+    - 10
+    - 25
+    - 35
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Timer:
+  Check: Enabled
+  Max flags: 35
+  Prevent:
+    state: Enabled
+    flags: 3
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+  Alert violations:
+    - 11
+    - 22
+    - 30
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+NoFall:
+  Check: Enabled
+  Max flags: 20
+  Prevent:
+    state: Enabled
+    flags: 1
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+  Alert violations:
+    - 6
+    - 12
+    - 15
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+InventoryActions:
+  Check: Enabled
+  Max flags: 35
+  Prevent:
+    state: Enabled
+    flags: 9
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+    TypeC: Enabled
+  Alert violations:
+    - 11
+    - 22
+    - 30
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+ChestStealer:
+  Check: Enabled
+  Max flags: 35
+  Max clicks: 6
+  Prevent:
+    state: Enabled
+    flags: 2
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+  Alert violations:
+    - 10
+    - 20
+    - 30
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Criticals:
+  Check: Enabled
+  Max flags: 8
+  Prevent:
+    state: Enabled
+    flags: 2
+  Alert violations:
+    - 2
+    - 4
+    - 6
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Reach:
+  Check: Enabled
+  Max flags: 30
+  Prevent:
+    state: Enabled
+    flags: 5
+  Types:
+    TypeA:
+      State: Enabled
+      Max: 3.18
+    TypeB:
+      State: Enabled
+      Max: 3.18
+  Alert violations:
+    - 7
+    - 15
+    - 25
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Killaura:
+  Check: Enabled
+  Max flags: 30
+  Prevent:
+    state: Enabled
+    flags: 3
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+    TypeC: Enabled
+    TypeD: Enabled
+    TypeE: Enabled
+    TypeF: Enabled
+    TypeG: Enabled
+    TypeH: Enabled
+    TypeI: Disabled
+    TypeJ: Enabled
+  Alert violations:
+    - 8
+    - 13
+    - 25
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+HitBox:
+  Check: Enabled
+  Max flags: 15
+  Prevent:
+    state: Enabled
+    flags: 5
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+  Alert violations:
+    - 5
+    - 10
+    - 15
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+# -> Beta <-
+AutoClicker:
+  Check: Enabled
+  Allow Butterfly clicking: Disabled
+  Max flags: 25
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+    TypeC: Enabled
+    TypeD: Enabled
+    TypeE: Enabled
+    TypeF: Enabled
+    TypeG: Disabled
+    TypeH: Enabled
+    TypeI: Enabled
+    TypeJ: Enabled
+    TypeK: Enabled
+  Alert violations:
+    - 6
+    - 11
+    - 15
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+AimAssist:
+  Check: Enabled
+  Max flags: 25
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+    TypeC: Enabled
+    TypeD: Enabled
+    TypeE: Enabled
+    TypeF: Enabled
+    TypeG: Enabled
+    TypeH: Enabled
+    TypeI: Disabled
+  Alert violations:
+    - 7
+    - 15
+    - 20
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+KnockBack:
+  Check: Enabled
+  Max flags: 25
+  Prevent:
+    state: Enabled
+    flags: 3
+  Alert violations:
+    - 5
+    - 9
+    - 15
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+# -> Beta <-
+Velocity:
+  Check: Enabled
+  Max flags: 25
+  Prevent:
+    state: Enabled
+    flags: 6
+  Types:
+    # Vertical
+    TypeA: Enabled
+    # Horizontal
+    TypeB: Disabled
+  Alert violations:
+    - 5
+    - 9
+    - 15
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+# Disables Automatically on 1.12 servers and above
+PingSpoof:
+  Check: Enabled
+  Max flags: 45
+  Alert violations:
+    - 10
+    - 15
+    - 20
+  Kick player: Disabled
+  Ban player: Disabled
+
+
+# Check will disable Automatically in servers that are below 1.10.X
+AutoFish:
+  Check: Enabled
+  Max flags: 20
+  Alert violations:
+    - 10
+    - 15
+    - 20
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+NoSwing:
+  Check: Enabled
+  Max flags: 10
+  Alert violations:
+    - 5
+    - 7
+    - 10
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+FastBow:
+  Check: Enabled
+  Max flags: 10
+  Prevent:
+    state: Enabled
+    flags: 2
+  Alert violations:
+    - 3
+    - 5
+    - 8
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+BadPackets:
+  Check: Enabled
+  Max flags: 25
+  Types:
+    TypeA: Enabled
+    TypeB: Enabled
+    TypeC: Enabled
+    TypeD: Enabled
+    TypeE: Enabled
+    TypeF: Enabled
+    TypeG: Enabled
+    TypeH: Enabled
+    TypeI: Enabled
+    TypeJ: Enabled
+    TypeK: Enabled
+    TypeL: Enabled
+    TypeM: Enabled
+    TypeN: Enabled
+    TypeO: Enabled
+  Alert violations:
+    - 5
+    - 10
+    - 13
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Scaffold:
+  Check: Enabled
+  Max flags: 20
+  Prevent:
+    state: Enabled
+    flags: 3
+  TypeA: Enabled
+  TypeB: Enabled
+  TypeC: Enabled
+  TypeD: Enabled
+  TypeE: Enabled
+  TypeF: Enabled
+  Alert violations:
+    - 5
+    - 13
+    - 18
+  Kick player: Enabled
+  Ban player: Disabled
+
+
+Regen:
+  Check: Enabled
+  Max flags: 20
+  Prevent:
+    state: Enabled
+    flags: 3
+  Alert violations:
+    - 7
+    - 14
+    - 20
+  Kick player: Enabled
+  Ban player: Disabled

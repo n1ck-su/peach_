@@ -1,0 +1,67 @@
+#=+= GodsEye Configuration =+=
+# Placeholders: / note PlaceHolderAPI is also supported /
+# %player% - player's name
+# %guiplayer% - the name of the player related to gui actions
+# %hack% - hack name
+# %world% - the world that player is at
+
+prefix: '&6GodsEye >> &7'
+
+Punishment settings:
+  # Amount of kicks before ban
+  Kicks: 2
+  # Kicking command
+  Kick command: 'kick %player% &7You have been kicked for hacking : &4GODSEYE CHEAT DETECTION'
+  # Banning command
+  Ban command: 'ban %player% &7You have been banned for hacking : &4GODSEYE CHEAT DETECTION'
+  # Ban waves
+  BanWave:
+    # Enable/Disable ban waves
+    Banwaves: Disabled
+    # How much time between ban waves, in hours
+    Banwave timer: 24
+  # Ban effects
+  BanEffects:
+    # Enable/Disable ban effects
+    Ban effects: Enabled
+    # Choose ban effect
+    # 1 - Guardians can see everything
+    # 2 - The lightning of the gods
+    # 3 - Sword fall
+    Ban effect index: 2
+
+# here you can change the commands and settings of the gui
+# Console_executor will execute the command from the console
+# Player_executor will execute the command as if the player have executed the command
+Gui settings:
+  Profile:
+    Teleport:
+      Console_executor:
+        - tp %player% %guiplayer%
+      Player_executor:
+
+
+Messages:
+  Ban Broadcast: '&9&l%player% &7has been &c&lbanned&7 for hacking, I can see everything!'
+  Kick Broadcast: '&9&l%player% &7has been &c&lkicked&7 for hacking, I can see everything!'
+  # This message will not be affected by prefix and the hack name color is changing according
+  # to the violations count
+  Alert Message: '&b&ke&r &c&lGodsEye > &6%player% &eis suspected for&r %hack%'
+  No permissions message: '&7You dont have permission to use this command.'
+
+
+AC settings:
+  # will improve InventoryActions check if enabled
+  Use InventoryOpenAchievement: true
+  # will spoof the health of players to prevent damage indicators (only for 1.8.X servers)
+  HealthSpoofer: true
+  # Aggressive TPS Protection, makes GodsEye stop checking players at all when TPS is very low
+  # This setting will not affect normal TPS protection, its just another layer of protection
+  Aggressive TPS Protection: Enabled
+  # Activate and check if the player has GodsEye.bypass.<check>
+  # Note! enabling this may spam permissions checking request (a problem if you use a permissions database)
+  Check specific permissions: Disabled
+
+
+GodsEye Professional:
+  License: ''
